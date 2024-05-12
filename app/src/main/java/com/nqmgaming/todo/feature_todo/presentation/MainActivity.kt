@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.nqmgaming.todo.feature_todo.presentation.todo_list.TodoListViewModel
 import com.nqmgaming.todo.feature_todo.presentation.todo_list.components.TodoListScreen
+import com.nqmgaming.todo.feature_todo.presentation.todo_new_update.components.TodoNewUpdateScreen
 import com.nqmgaming.todo.feature_todo.presentation.util.Screen
 import com.nqmgaming.todo.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        composable(route = Screen.TodoNewUpdateScreen.route + "?todoId = {todoId}",
+                        composable(route = Screen.TodoNewUpdateScreen.route + "?todoId={todoId}",
                             arguments = listOf(
                                 navArgument(
                                     name = "todoId",
@@ -53,7 +54,7 @@ class MainActivity : ComponentActivity() {
                                 }
                             )
                         ) {
-                            // TodoNewUpdateScreen()
+                            TodoNewUpdateScreen(navController = navController)
 
                         }
                     }

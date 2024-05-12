@@ -20,6 +20,10 @@ object TodoListStrings {
 }
 
 object NewUpdateStrings {
+    const val TODO_ITEM_TITLE: String = "Title..."
+    const val TODO_ITEM_DESCRIPTION: String = "Description..."
+    const val CONFIRM_DELETE_TODO_ITEM: String = "Are you sure you want to delete this todo item?"
+    const val YES = "Yes"
     const val ERROR_DELETING_TODO_ITEM: String = "Error deleting todo item"
     const val TODO_ITEM_DELETED: String = "Todo item deleted"
     const val TODO_ITEM_ADDED = "Todo item added"
@@ -29,6 +33,8 @@ object NewUpdateStrings {
 }
 
 object ContentDescription {
+    const val BACK = "Back"
+    const val SAVE_TODO: String = "Save todo"
     const val DELETE_TODO_ITEM = "Delete todo item"
     const val COMPLETE_TODO_ITEM = "Complete todo item"
     const val ARCHIVE_TODO_ITEM = "Archive todo item"

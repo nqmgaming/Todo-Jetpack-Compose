@@ -57,6 +57,7 @@ import com.nqmgaming.todo.core.util.ContentDescription
 import com.nqmgaming.todo.core.util.TodoListStrings
 import com.nqmgaming.todo.feature_todo.presentation.todo_list.TodoListEvent
 import com.nqmgaming.todo.feature_todo.presentation.todo_list.TodoListViewModel
+import com.nqmgaming.todo.feature_todo.presentation.util.Screen
 import kotlinx.coroutines.launch
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -112,7 +113,9 @@ fun TodoListScreen(
         Scaffold(
             floatingActionButton = {
                 FloatingActionButton(
-                    onClick = { /*TODO*/ },
+                    onClick = {
+                        navController.navigate(Screen.TodoNewUpdateScreen.route)
+                    },
                     shape = CircleShape,
                     containerColor = MaterialTheme.colorScheme.primary
                 ) {
@@ -212,9 +215,9 @@ fun TodoListScreen(
                                     }
                                 },
                                 onCardClick = {
-//                                    navController.navigate(
-// TODO: Uncomment the following line when the navigation is implemented
-//                                    )
+                                    navController.navigate(
+                                        Screen.TodoNewUpdateScreen.route + "?todoId=${todo.id}"
+                                    )
                                 }
                             )
 

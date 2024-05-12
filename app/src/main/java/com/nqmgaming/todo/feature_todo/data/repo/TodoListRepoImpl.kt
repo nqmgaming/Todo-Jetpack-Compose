@@ -95,6 +95,7 @@ class TodoListRepoImpl(
 
             }
         }
+        dao.deleteTodoItem(todoItem.toLocalTodoItem())
     }
 
     private fun isCacheEmpty(): Boolean {
